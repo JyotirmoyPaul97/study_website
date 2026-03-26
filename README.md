@@ -1,7 +1,8 @@
 📚 Study Management Website
 
-(https://github.com/JyotirmoyPaul97/study_website/blob/main/IMAGE2.jpg)
-(https://github.com/JyotirmoyPaul97/study_website/blob/main/IMAGE3.jpg)
+![image alt](https://github.com/JyotirmoyPaul97/study_website/blob/main/IMAGE2.jpg)
+![image alt](https://github.com/JyotirmoyPaul97/study_website/blob/main/IMAGE3.jpg)
+
 
 
 A modern, all-in-one study platform designed to streamline learning for students from 8th to 12th standard.
