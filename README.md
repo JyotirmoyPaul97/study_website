@@ -3,7 +3,7 @@
 ![image alt](https://github.com/JyotirmoyPaul97/study_website/blob/main/IMAGE2.jpg)
 ![image alt](https://github.com/JyotirmoyPaul97/study_website/blob/main/IMAGE3.jpg)
 
-[Your Link Here](https://study-website-gamma.vercel.app/)
+[Your Link Here](study-website-8jbp.vercel.app)
 
 
 
