@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elite Tuition Classes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Elite Tuition Classes</h1>
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#lectures">Lectures</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#analysis">Analysis</a>
+  </nav>
+</header>
+
+<section id="dashboard" class="card">
+  <h2>Dashboard</h2>
+  <p>Welcome! Manage your studies smartly.</p>
+</section>
+
+<section id="lectures" class="card">
+  <h2>Lectures</h2>
+  <input type="text" id="lectureInput" placeholder="Add lecture topic">
+  <button id="addLectureBtn">Add</button>
+  <ul id="lectureList"></ul>
+</section>
+
+<section id="tasks" class="card">
+  <h2>Tasks</h2>
+  <input type="text" id="taskInput" placeholder="Add task">
+  <button id="addTaskBtn">Add</button>
+  <ul id="taskList"></ul>
+</section>
+
+<section id="quiz" class="card">
+  <h2>MCQ Quiz</h2>
+  <p id="question">What is 2 + 2?</p>
+  <div class="quiz-buttons">
+    <button class="option">4</button>
+    <button class="option">3</button>
+    <button class="option">5</button>
+  </div>
+  <p id="result"></p>
+</section>
+
+<section id="analysis" class="card">
+  <h2>Daily Analysis</h2>
+  <p id="analysisText">Tasks Completed: 0</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
