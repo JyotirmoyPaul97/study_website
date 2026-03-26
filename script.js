@@ -1,69 +1,58 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-}
+let tasksCompleted = 0;
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.3);
-}
+// Add Lecture
+document.getElementById("addLectureBtn").addEventListener("click", function () {
+  let input = document.getElementById("lectureInput");
 
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
+  if (input.value.trim() === "") return;
 
-nav a:hover {
-  text-decoration: underline;
-}
+  let li = document.createElement("li");
+  li.textContent = input.value;
 
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  margin: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-}
+  document.getElementById("lectureList").appendChild(li);
+  input.value = "";
+});
 
-input {
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
+// Add Task
+document.getElementById("addTaskBtn").addEventListener("click", function () {
+  let input = document.getElementById("taskInput");
 
-button {
-  padding: 10px 15px;
-  margin-left: 10px;
-  border: none;
-  border-radius: 6px;
-  background: #00c6ff;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  if (input.value.trim() === "") return;
 
-button:hover {
-  background: #0072ff;
-}
+  let li = document.createElement("li");
+  li.textContent = input.value;
 
-ul {
-  margin-top: 15px;
-}
+  li.addEventListener("click", function () {
+    if (!li.classList.contains("done")) {
+      li.classList.add("done");
+      li.style.textDecoration = "line-through";
+      tasksCompleted++;
+      updateAnalysis();
+    }
+  });
 
-li {
-  cursor: pointer;
-  margin: 5px 0;
-}
+  document.getElementById("taskList").appendChild(li);
+  input.value = "";
+});
 
-.quiz-buttons button {
-  display: block;
-  margin: 10px 0;
+// Quiz Logic
+let options = document.querySelectorAll(".option");
+
+options.forEach(button => {
+  button.addEventListener("click", function () {
+    let value = button.textContent;
+    let result = document.getElementById("result");
+
+    if (value === "4") {
+      result.textContent = "Correct!";
+    } else {
+      result.textContent = "Wrong!";
+    }
+  });
+});
+
+// Update Analysis
+function updateAnalysis() {
+  document.getElementById("analysisText").textContent =
+    "Tasks Completed: " + tasksCompleted;
 }
